@@ -1,0 +1,12 @@
+streamlit==1.23.1
+pandas
+pymongo
+pinecone-client
+python-dotenv
+sentence-transformers
+transformers
+torch
+matplotlib
+plotly
+wordcloud
+scikit-learn

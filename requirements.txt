@@ -1,0 +1,11 @@
+pyspark
+pandas
+pyarrow
+fastparquet
+kafka-python
+transformers
+torch
+sqlalchemy
+psycopg2-binary
+streamlit
+apache-airflow==2.6.3

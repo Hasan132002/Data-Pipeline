@@ -1,0 +1,17 @@
+so-pipeline/
+├─ data/                     # raw files & parquet
+│  ├─ raw/                   # raw JSON files
+│  └─ parquet/               # consolidated parquet
+├─ dags/                     # airflow DAGs
+│  └─ so_pipeline_dag.py
+├─ scripts/
+│  ├─ kafka_producer.py      # optional: stream JSON to kafka
+│  ├─ spark_ingest.py        # Spark batch read JSON -> parquet
+│  ├─ spark_transform.py     # cleaning + FE using PySpark
+│  ├─ hf_inference.py        # huggingface inference (batch)
+│  ├─ load_to_postgres.py    # load results to Postgres
+│  └─ utils.py
+├─ notebooks/                # optional Jupyter/Thonny experiments
+├─ docker-compose.yml        # kafka, postgres, minio, metabase
+├─ airflow/                  # airflow configs if needed
+└─ README.md

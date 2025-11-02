@@ -1,0 +1,36 @@
+# StackOverflow SO-Pipeline - README
+
+Project path: `D:\BDA\projects\so-pipeline`
+
+## Quick run (local)
+1. Install Docker Desktop (for Kafka/Postgres/MinIO/Metabase). 
+See Docker Desktop download. :contentReference[oaicite:3]{index=3}
+2. From project root run:
+   ```bash
+   docker-compose up -d
+
+
+Activate your Python venv and install requirements:
+D:
+cd D:\BDA\projects\so-pipeline
+.venv\Scripts\activate
+pip install -r requirements.txt
+
+
+
+Ingest:
+
+python scripts/spark_ingest.py D:\BDA\projects\so-pipeline\stackoverflow_questions.json
+python scripts\spark_transform.py
+python scripts\hf_inference.py
+python scripts\load_to_postgres.py
+
+
+Run Streamlit dashboard:
+
+streamlit run streamlit_app.py
+
+
+pgsql
+> Install inside your `.venv`: `pip install -r requirements.txt`. 
+(Airflow may require constraints in some setups; for student/local it usually works.)

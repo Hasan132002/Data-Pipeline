@@ -1,0 +1,56 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+*.egg
+dist/
+build/
+
+# Virtualenvs
+.venv/
+venv/
+*/.venv/
+*/venv/
+
+# Environment files
+.env
+.env.*
+.env.local
+
+# VSCode / IDE
+.vscode/
+.idea/
+
+# Docker
+.docker/
+docker-compose.override.yml
+
+# Logs / DB / data
+*.log
+*.sqlite
+*.db
+dags/logs/
+streamlit_app/data/
+data/
+*.csv
+*.json
+
+# OS
+.DS_Store
+Thumbs.db
+
+# PyCharm
+*.iml
+
+# node_modules
+node_modules/
+# Environment and secrets
+.env
+.env.*
+streamlit_app/.env
+*.json
+streamlit_app/data/*.json
+# Ignore environment files
+.env
+.env.*
+streamlit_app/.env
